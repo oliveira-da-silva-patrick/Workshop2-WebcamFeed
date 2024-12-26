@@ -17,7 +17,7 @@ create_virtual_environment() {
 
 activate_virtual_environment() {
     if [[ "$OSTYPE" == "msys"* ]]; then
-        source "$VENV_DIR/Scripts/activate"
+        "$VENV_DIR/Scripts/activate"
     else
         source "$VENV_DIR/bin/activate"
     fi
