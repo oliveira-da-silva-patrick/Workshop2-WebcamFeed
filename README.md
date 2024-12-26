@@ -61,11 +61,29 @@ python --version
 python3 -m venv venv
 ```
 5. Activate environment:
-    - MacOS + Linux: `source venv/bin/activate`
-    - Windows: `venv/Scripts/activate`
-6. Upgrade pip: `pip install --upgrade pip==24.3.1`
-7. Install packages: `pip install -r requirements.txt`
-8. Run tests: `pytest test_app.py`
-9. Run program: `python app.py`
+    - MacOS + Linux: 
+    ```
+    source venv/bin/activate
+    ```
+    - Windows: 
+    ```
+    venv/Scripts/activate
+    ```
+6. Upgrade pip: 
+```
+pip install --upgrade pip==24.3.1
+```
+7. Install packages: 
+```
+pip install -r requirements.txt
+```
+8. Run tests: 
+```
+pytest test_app.py
+```
+9. Run program: 
+```
+python app.py
+```
 
 ### Using Docker
