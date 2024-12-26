@@ -11,8 +11,10 @@ To install and run this program, there are no prerequisites unless you are on a 
 
 Before you start any installation, you will need to do the following:
 
-`git clone https://github.com/oliveira-da-silva-patrick/Workshop2-WebcamFeed.git
-cd reproducible_DL`
+```
+git clone https://github.com/oliveira-da-silva-patrick/Workshop2-WebcamFeed.git
+cd reproducible_DL
+```
 
 If you don't have Git installed, you can download the repository manually. After downloading it, you will need to unzip it and open the folder on your terminal window.
 
@@ -31,23 +33,35 @@ If you have Python already installed and want to try first with your own install
 To run this script on MacOS, you will need to have Homebrew installed.
 
 1. Open your terminal window at the root of the project
-2. Run `bash run.sh`
+2. Run 
+```
+bash run.sh
+```
 
 ### Using a script that only sets up the project environment
 
 1. Open your terminal window at the root of the project
-2. Run `bash run_without_python_installation.sh`
+2. Run 
+```
+bash run_without_python_installation.sh
+```
 
 ### Using Python and a virtual environment
 
 This tutorial follows what the scripts above do automatically
 
 1. Open your terminal window at the root of the project
-2. Check if Python version is 3.12.6: `python --version`
+2. Check if Python version is 3.12.6: 
+```
+python --version
+```
 3. If Python version is not ok, try with your installation first and if it does not work come back here after installing Python@3.12.6
-4. Create environment: `python3 -m venv venv`
+4. Create environment: 
+```
+python3 -m venv venv
+```
 5. Activate environment:
-    - MacOS + Linux: `source venv/bin/activate``
+    - MacOS + Linux: `source venv/bin/activate`
     - Windows: `venv/Scripts/activate`
 6. Upgrade pip: `pip install --upgrade pip==24.3.1`
 7. Install packages: `pip install -r requirements.txt`
