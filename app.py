@@ -6,6 +6,11 @@ WIDTH = 80
 HEIGHT = 60
 ASCII_SCALE = ['@', '%', '#', '*', '+', '=', '-', ':', ' ', ' ']
 
+CLEAR_COMMAND = 'clear'
+
+if os.name == 'nt': # nt == windows
+    CLEAR_COMMAND = 'cls'
+    
 def pixel_to_ascii(pixel_color):
     index = (int(pixel_color / 25.5)) - 1
     return ASCII_SCALE[index] * 2
@@ -37,7 +42,7 @@ def webcam_capture():
 
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         resized = cv2.resize(gray, (WIDTH, HEIGHT))
-        os.system('clear')
+        os.system(CLEAR_COMMAND)
         cmd_print(resized)
 
         # press 'q' to quit

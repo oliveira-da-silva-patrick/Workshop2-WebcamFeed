@@ -58,7 +58,7 @@ python --version
 3. If Python version is not ok, try with your installation first and if it does not work come back here after installing Python@3.12.6
 4. Create environment: 
 ```
-python3 -m venv venv
+python -m venv venv
 ```
 5. Activate environment:
     - MacOS + Linux: 
@@ -67,11 +67,11 @@ python3 -m venv venv
     ```
     - Windows: 
     ```
-    venv/Scripts/activate
+    venv\Scripts\activate
     ```
 6. Upgrade pip: 
 ```
-pip install --upgrade pip==24.3.1
+python -m pip install --upgrade pip==24.3.1
 ```
 7. Install packages: 
 ```
