@@ -13,7 +13,7 @@ Before you start any installation, you will need to do the following:
 
 ```
 git clone https://github.com/oliveira-da-silva-patrick/Workshop2-WebcamFeed.git
-cd reproducible_DL
+cd Workshop2-WebcamFeed
 ```
 
 If you don't have Git installed, you can download the repository manually. After downloading it, you will need to unzip it and open the folder on your terminal window.
