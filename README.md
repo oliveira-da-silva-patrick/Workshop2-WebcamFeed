@@ -87,3 +87,20 @@ python app.py
 ```
 
 ### Using Docker
+
+The webcam is disabled on Docker and instead you will be faced with a cat :O
+
+1. Launch Docker
+2. Open your terminal window at the root of the project
+3. Build the Dockerfile 
+```
+docker build -t webcam_ascii .
+```
+4. Perform the tests on the container 
+```
+docker run --rm -it webcam_ascii pytest
+```
+5. Run the program on Docker
+```
+docker run --rm -it webcam_ascii
+```

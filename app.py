@@ -1,13 +1,20 @@
 import cv2
 import os
 import time
+import sys
 
 WIDTH = 80
 HEIGHT = 60
 ASCII_SCALE = ['@', '%', '#', '*', '+', '=', '-', ':', ' ', ' ']
 
 CLEAR_COMMAND = 'clear'
+HAS_WEBCAM = True
 
+if "-nw" in sys.argv:
+    HAS_WEBCAM = False
+    WIDTH = 40
+    HEIGHT = 40
+    
 if os.name == 'nt': # nt == windows
     CLEAR_COMMAND = 'cls'
     
@@ -24,7 +31,10 @@ def webcam_capture():
     gif = False
     
     try:
-        capture = cv2.VideoCapture(0)
+        if HAS_WEBCAM:
+            capture = cv2.VideoCapture(0)
+        else:
+            raise Exception("No webcam... jumping to alternative")
     except:
         capture = cv2.VideoCapture('pop-cat.gif')
         sleep_time = 0.05
@@ -32,7 +42,6 @@ def webcam_capture():
 
     while True:
         returned, frame = capture.read()
-
         if not returned:
             if gif: 
                 capture = cv2.VideoCapture('pop-cat.gif')

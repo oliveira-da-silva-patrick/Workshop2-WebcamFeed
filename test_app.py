@@ -1,7 +1,9 @@
 import unittest
 import numpy as np
 import cv2
-from app import pixel_to_ascii, cmd_print, webcam_capture, WIDTH, HEIGHT, ASCII_SCALE
+from app import pixel_to_ascii, cmd_print, WIDTH, HEIGHT, ASCII_SCALE, HAS_WEBCAM
+import sys
+from unittest.mock import patch
 
 class TestApp(unittest.TestCase): 
     
@@ -16,6 +18,14 @@ class TestApp(unittest.TestCase):
                 ascii_char = pixel_to_ascii(i)
                 self.assertEqual(ascii_char[0], ascii_char[1])
                 self.assertIn(ascii_char[0], ASCII_SCALE)
+                
+    def test_main_no_args(self):
+        with patch.object(sys, 'argv', ['app.py']):
+            self.assertNotIn("-nw", sys.argv)
+
+    def test_main_with_args(self):
+        with patch.object(sys, 'argv', ['app.py', '-nw']):
+            self.assertIn("-nw", sys.argv)
 
     def test_webcam_capture_simulated_input(self):
         print("\ntesting if frame sequencing works (loop)")
