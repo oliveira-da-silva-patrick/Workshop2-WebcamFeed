@@ -68,7 +68,7 @@ install_python_version() {
 create_virtual_environment() {
     if [[ ! -d "$VENV_DIR" ]]; then
         echo "Creating virtual environment..."
-        python3 -m venv "$VENV_DIR"
+        python -m venv "$VENV_DIR"
     else
         echo "Virtual environment already exists."
     fi
@@ -76,7 +76,7 @@ create_virtual_environment() {
 
 activate_virtual_environment() {
     if [[ "$OSTYPE" == "msys"* ]]; then
-        "$VENV_DIR/Scripts/activate"
+        "$VENV_DIR\Scripts\activate"
     else
         source "$VENV_DIR/bin/activate"
     fi
@@ -84,7 +84,7 @@ activate_virtual_environment() {
 
 ensure_pip_version() {
     echo "Ensuring pip version $PIP_VERSION..."
-    pip install --upgrade "pip==$PIP_VERSION"
+    python -m pip install --upgrade "pip==$PIP_VERSION"
 }
 
 install_requirements() {
