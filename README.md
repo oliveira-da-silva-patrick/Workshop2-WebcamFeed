@@ -7,7 +7,7 @@ This project is done under the scope of the Workshop 2 class given by Dr. Bruno 
 
 I am working on a MacOS device so it's possible that my installation methods for other operating systems might not work. If that's the case, feel free to raise an issue.
 
-To install and run this program, there are no prerequisites unless you are on a Windows. Windows users need to install Python by themselves. I am using Python@3.12.6. Recent Python versions should work too but that is not completely verified.
+To install and run this program, there are no prerequisites unless you are on a Windows. Windows users need to install Python by themselves. I am using Python@3.12.6. Recent Python versions should work too but that is not completely verified. The first time running, you may need to accept to use the webcam.
 
 Before you start any installation, you will need to do the following:
 
