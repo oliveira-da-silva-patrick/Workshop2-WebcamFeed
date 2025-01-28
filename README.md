@@ -53,12 +53,12 @@ This tutorial follows what the scripts above do automatically
 1. Open your terminal window at the root of the project
 2. Check if Python version is 3.12.6: 
 ```
-python --version
+python3 --version
 ```
 3. If Python version is not ok, try with your installation first and if it does not work come back here after installing Python@3.12.6
 4. Create environment: 
 ```
-python -m venv venv
+python3 -m venv venv
 ```
 5. Activate environment:
     - MacOS + Linux: 
@@ -71,11 +71,11 @@ python -m venv venv
     ```
 6. Upgrade pip: 
 ```
-python -m pip install --upgrade pip==24.3.1
+python3 -m pip3 install --upgrade pip==24.3.1
 ```
 7. Install packages: 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 8. Run tests: 
 ```
@@ -83,7 +83,7 @@ pytest test_app.py
 ```
 9. Run program: 
 ```
-python app.py
+python3 app.py
 ```
 
 ### Using Docker
