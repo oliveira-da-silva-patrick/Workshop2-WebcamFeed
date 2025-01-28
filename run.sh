@@ -68,7 +68,7 @@ install_python_version() {
 create_virtual_environment() {
     if [[ ! -d "$VENV_DIR" ]]; then
         echo "Creating virtual environment..."
-        python -m venv "$VENV_DIR"
+        python3 -m venv "$VENV_DIR"
     else
         echo "Virtual environment already exists."
     fi
@@ -84,13 +84,13 @@ activate_virtual_environment() {
 
 ensure_pip_version() {
     echo "Ensuring pip version $PIP_VERSION..."
-    python -m pip install --upgrade "pip==$PIP_VERSION"
+    python3 -m pip3 install --upgrade "pip==$PIP_VERSION"
 }
 
 install_requirements() {
     if [[ -f "$REQUIREMENTS_FILE" ]]; then
         echo "Installing requirements from $REQUIREMENTS_FILE..."
-        pip install -r "$REQUIREMENTS_FILE"
+        pip3 install -r "$REQUIREMENTS_FILE"
     else
         echo "$REQUIREMENTS_FILE not found. Skipping package installation."
     fi
@@ -103,7 +103,7 @@ run_tests() {
 
 run_main_program() {
     echo "Running main program..."
-    python "$MAIN_PROGRAM"
+    python3 "$MAIN_PROGRAM"
 }
 
 if ! check_python_version; then
